@@ -1,0 +1,82 @@
+[
+   {
+      "model":"auth.user",
+      "pk":2,
+      "fields":{
+        "password":"pbkdf2_sha256$260000$3nI5MwyKFNy5GGsxMMcW5Q$wLyWtiuqjRgn3Rh1AkF7R+HS3rFLqyB1rPcIsjcpdt0=",
+        "last_login":"2021-06-10T18:45:53.240Z",
+        "username":"johnlennon@gmail.com",
+        "first_name": "John",
+        "last_name": "Lennon",
+        "email": "johnlennon@gmail.com",
+        "is_active":true,
+        "date_joined":"2021-06-09T17:13:37Z",
+        "groups":[
+            
+        ],
+        "user_permissions":[
+            
+        ]
+      }
+   },
+   {
+      "model":"auth.user",
+      "pk":3,
+      "fields":{
+        "password":"pbkdf2_sha256$260000$3nI5MwyKFNy5GGsxMMcW5Q$wLyWtiuqjRgn3Rh1AkF7R+HS3rFLqyB1rPcIsjcpdt0=",
+        "last_login":"2021-06-10T18:45:53.240Z",
+        "username":"paulmccartney@mailinator.com",
+        "first_name": "Paul",
+        "last_name": "McCartney",
+        "email": "paulmccartney@mailinator.com",
+        "is_active":true,
+        "date_joined":"2021-06-09T17:13:37Z",
+        "groups":[
+            
+        ],
+        "user_permissions":[
+            
+        ]
+      }
+   },
+   {
+      "model":"auth.user",
+      "pk":4,
+      "fields":{
+        "password":"pbkdf2_sha256$260000$3nI5MwyKFNy5GGsxMMcW5Q$wLyWtiuqjRgn3Rh1AkF7R+HS3rFLqyB1rPcIsjcpdt0=",
+        "last_login":"2021-06-10T18:45:53.240Z",
+        "username":"markcanty@mailinator.com",
+        "first_name": "Mark",
+        "last_name": "Canty",
+        "email": "markcanty@mailinator.com",
+        "is_active":true,
+        "date_joined":"2021-06-09T17:13:37Z",
+        "groups":[
+            
+        ],
+        "user_permissions":[
+            
+        ]
+      }
+   },
+   {
+      "model":"auth.user",
+      "pk":5,
+      "fields":{
+        "password":"pbkdf2_sha256$260000$3nI5MwyKFNy5GGsxMMcW5Q$wLyWtiuqjRgn3Rh1AkF7R+HS3rFLqyB1rPcIsjcpdt0=",
+        "last_login":"2021-06-10T18:45:53.240Z",
+        "username":"shivanikakrecha@gmail.com",
+        "first_name": "Shivani",
+        "last_name": "Kakrecha",
+        "email": "shivanikakrecha@gmail.com",
+        "is_active":true,
+        "date_joined":"2021-06-09T17:13:37Z",
+        "groups":[
+            
+        ],
+        "user_permissions":[
+            
+        ]
+      }
+   }
+]

@@ -1,0 +1,117 @@
+1) Server level :- 
+	
+	-> Update HTTP version - latest version is providing the support for increases bandwidth efficiency by using a binary compressed format for headers, decreases latency by multiplexing requests on the same TCP connection
+
+	-> Load balancer :- 
+
+	We can apply load balancers for multi modules application. 
+
+	Multiple ways to bind load balancers :- 
+		- Nginx can use 
+		- Default load balancers
+		- If we are using Elastic bean-stalk then it will automatically handle the load balancers no need to implement additionally 
+
+	-> 	Nginx :- 
+
+	Multiple purpose to use nginx :- 
+		- To handle more than 10,000 simultaneous connections.
+		- For caching or microcaching
+		- Using reverse proxy concept of Nginx
+		- As a load balancer 
+		- Apply static file caching using Nginx
+		- Set time out to manage request handshaking 
+
+
+	-> Autoscalling :- 
+		- Set a cloud watch target or timezone and datetime based scalling to control request trafics 
+
+	-> Elastic Block Stalk 
+
+	-> Apply Redis-cache
+
+	-> Apply sockets
+
+	-> Apply lamda with specific request 
+
+	-> Security preventions ( Ex:- If gettting multiple request in limited timing then block that ip for few time. )
+
+2) Code Level:- 
+
+	-> While user is requesting then maintain its process 
+
+		Ex. One request is comming then it is identify by the user and its id. 
+		and call the specific timeduration sockets or call who is ftching the currunt process of 
+		executed process. 
+
+		A - Trigger ( process )
+		after 15 second 30% execution done 
+		after 15 second 50% execution done 
+		after 15 second 60% execution done 
+		and so on.....
+
+		Redis provided queue concept too!
+		https://pythonrepo.com/repo/rq-django-rq-python-working-with-event-and-task-queues
+
+		@task
+		def do_work(self, list_of_work, progress_observer):
+		    total_work_to_do = len(list_of_work)
+		    for i, work_item in enumerate(list_of_work):
+		        do_work_item(work_item)
+		        # tell the progress observer how many out of the total items we have processed
+		        progress_observer.set_progress(i, total_work_to_do)
+		    return 'work is complete'
+
+		task.update_state(
+		    state=PROGRESS_STATE,
+		    meta={
+		        'current': current,
+		        'total': total,
+		    }
+		)
+
+	-> After the execution of each request per user it should not trigger another request.
+		define the execution process mechanism. 
+	
+	-> Using .iterator()
+
+		If we have large database and we are calling it through User.objects.all() then use 
+		.iterator() 
+
+
+		for obj in User.objects.iterator():
+    		# do something with obj
+
+	    with something like
+
+	    for b in User.objects.all().defer('email').iterator():
+		    b.username = "@gmail.com"
+		    b.save()
+
+ 	-> Use update() instead of the foor loop
+
+ 		for obj in User.objects.filter(email="bob@gmail.com"):
+		    obj.first_name = 'sharon'
+		    obj.save()
+
+		with something like User.objects.filter(email="bob@gmail.com").update(first_name='sharon').
+	
+	-> Using cache middlewares  ( mentioned in settings.py )
+	
+	-> Using cached sessions
+
+	-> Query optimization 
+
+		Select_related, prefetch_related, only, defer ( mostly in scenarios )
+
+	-> Database optimization 
+
+		db_index ( mentioned in userpreference -> models.py )
+		sql_views ( mentioned in news -> models.py )
+
+	-> Apply caching mechnism ( Server, Redis and Django)
+
+	-> Apply grabage collection ( Using file handling and closing files & memory mechanism ) 
+
+	-> Apply background jobs 
+
+		( celery and database iterator jobs )

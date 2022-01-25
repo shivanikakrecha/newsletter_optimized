@@ -1,0 +1,32 @@
+[
+   {
+      "model":"userpreference.userpreference",
+      "pk":1,
+      "fields":{
+         "created_at":"2021-06-10T19:06:17Z",
+         "modified_at":"2021-06-10T19:06:31.017Z",
+         "user":5,
+         "Preference":"business"
+      }
+   },
+   {
+      "model":"userpreference.userpreference",
+      "pk":2,
+      "fields":{
+         "created_at":"2021-06-11T18:50:43Z",
+         "modified_at":"2021-06-11T18:50:59.707Z",
+         "user":5,
+         "Preference":"entertainment"
+      }
+   },
+   {
+      "model":"userpreference.userpreference",
+      "pk":3,
+      "fields":{
+         "created_at":"2021-06-11T18:51:07Z",
+         "modified_at":"2021-06-11T18:51:12.623Z",
+         "user":5,
+         "Preference":"sports"
+      }
+   }
+]
